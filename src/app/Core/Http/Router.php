@@ -36,7 +36,7 @@ class Router
     private function addRoute(string $method, string $route, string $controller)
     {
         $routePattern = $this->makeUriPattern('/'.str_replace('/', '\/', $route).'$/');
-        $this->routes[$routePattern][$method] = array_combine(['controller', 'action'], explode('/', $controller));
+        $this->routes[$routePattern][$method] = array_combine(['controller', 'action'], explode('@', $controller));
     }
 
     public function get(string $route, string $controller): void

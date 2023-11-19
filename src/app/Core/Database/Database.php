@@ -20,6 +20,7 @@ class Database
     public function __construct(string $table)
     {
         $this->table = $table;    
+        $this->setConnection();
     }
 
     public static function config(string $host, string $dbname, string $user, string $password, int $port = 3306): void
