@@ -19,4 +19,8 @@ class EmpresaController extends Controller
 
         return new Response(HttpStatus::OK, $this->loadView('empresa/list', $data));
     }
+
+    public function register() {
+        return new Response(HttpStatus::OK, $this->loadView('empresa/register'));
+    }
 }
